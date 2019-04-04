@@ -1,0 +1,21 @@
+{% extends 'recipes/base.html' %}
+
+    {%block content%}
+    <h1>Create Recipe</h1>
+    <div class="col-md-5 mt-5 mb-5">
+    	{% if form.errors %}
+	<p>You entered something wrong</p>
+	    {% endif %}
+
+        <h2>Create Recipe</h2>
+
+        <form class="site-form" method="post">
+            {% csrf_token%}
+
+            {{ form.as_p }}
+
+        <input type="submit" value="create">
+        </form>
+
+    </div>
+    {% endblock%}

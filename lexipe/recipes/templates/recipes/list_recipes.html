@@ -1,0 +1,20 @@
+{% extends 'recipes/base.html' %}
+
+    {%block content%}
+<h1 class="pt-5 mt-5">Recipes</h1>
+<!--{% if recipes %}-->
+
+    {% for recipe in recipes %}
+    <div class=" mt-5">
+
+    <a href="{{ recipe.get_absolute_url }}">Hey</a>
+        <div>{{recipe.title}}</div>
+        <div>{{recipe}}</div>
+        <div>{{recipe.site_parser}}</div>
+
+    {% endfor %}
+    </div>
+<!--{% else %}-->
+<!--<p>No recipes</p>-->
+<!--{% endif%}-->
+    {% endblock %}

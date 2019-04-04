@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe</title>
+</head>
+
+<body>
+    <h1>Create Recipe</h1>
+    <div class="col-md-5 mt-5 mb-5">
+    	{% if form.errors %}
+	<p>You entered something wrong</p>
+	    {% endif %}
+
+        <h2>Delete Recipe</h2>
+
+        <form class="site-form" method="post">
+            {% csrf_token%}
+        <h2>Delete recipe "{{ object.title }}"</h2>
+        <input type="submit" value="create">
+            <button type="submit" > Delete </button>
+        </form>
+
+    </div>
+
+</body>

@@ -1,0 +1,15 @@
+beautifulsoup4==4.6.3
+certifi==2018.11.29
+chardet==3.0.4
+Django==2.1.4
+django-crispy-forms==1.7.2
+get==2018.11.19
+idna==2.8
+lxml==4.3.3
+post==2018.11.20
+psycopg2==2.7.6.1
+public==2018.11.20
+pytz==2018.7
+query-string==2018.11.20
+requests==2.21.0
+urllib3==1.24.1

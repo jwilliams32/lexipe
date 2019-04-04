@@ -1,0 +1,56 @@
+{% extends 'recipes/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<title>Lexipe</title>
+<body class="bg-info text-white">
+
+<!--jumbotron-->
+        <div class="jumbotron jumbotron-fluid text-white">
+          <div class="container text-sm-center pt-5">
+            <h1 class="display-2">Lexipe</h1>
+            <p class="lead">Track the progress of your pantry.</p>
+
+             <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
+              <!--<a type="button" class="btn btn-primary btn-lg" href="#login">Sign In</a>-->
+              <a type="button" class="btn btn-lg btn-secondary" href="/register" >Register</a>
+            </div>
+          </div>
+        </div>
+<!--/jumbotron-->
+
+<div class="container text-center">
+<!--Login form-->
+    <h2 class="display-1 mt-5" id="login"> Login</h2>
+
+        <div class="form-group mb-3 col-lg-6 mx-auto">
+            <!--<h1 class="display-4 text-center my-5 text-muted" id="login"></h1>-->
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="btn-group mt-4 mb-5" role="group" aria-label="Callout buttons">
+                  <input type="submit" class="btn btn-primary btn-lg" value="Login">
+                  <!--<a type="button" class="btn btn-lg btn-secondary" href="" >Register</a>-->
+                </div>
+                    <!--<input type="submit" value="Login"-->
+                       <!--class="btn btn-primary pull-right" />-->
+
+            </form>
+            <!--/loginform-->
+
+            <!--forgot password-->
+
+
+
+            <!--/forgot password-->
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+
+{% endblock %}
